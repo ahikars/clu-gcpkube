@@ -1,7 +1,7 @@
 pipeline {
   agent any
   environment {
-    TF_WORKSPACE = 'dev' //Sets the Terraform Workspace
+    TERRAFORM_HOME = "/usr/local/bin/"
     TF_IN_AUTOMATION = 'true'
   }
   stages {
