@@ -8,6 +8,7 @@ pipeline {
     stage('Terraform Init') {
       steps {
         sh "pwd"
+        sh "terraform init"
         sh "${env.TERRAFORM_HOME}/terraform init -input=false"
       }
     }
