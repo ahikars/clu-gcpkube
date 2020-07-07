@@ -7,7 +7,7 @@ pipeline {
   stages {
     stage('Terraform Init') {
       steps {
-        sh ${environment.TERRAFORM_HOME}/terraform init -input=false
+        sh "${environment.TERRAFORM_HOME}/terraform init -input=false"
       }
     }
     stage('Terraform Plan') {
