@@ -5,6 +5,10 @@ pipeline {
       args '--entrypoint='
     }
   }
+  environment {
+    TF_WORKSPACE = 'dev' //Sets the Terraform Workspace
+    TF_IN_AUTOMATION = 'true'
+  }
   stages {
     stage('Terraform Init') {
       steps {
