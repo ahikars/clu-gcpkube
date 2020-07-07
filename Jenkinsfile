@@ -9,7 +9,7 @@ pipeline {
       steps {
         sh "pwd"
         sh "ls"
-        sh "terraform init"
+        sh "locate terraform"
         }
     }
     // sh "${env.TERRAFORM_HOME}/terraform init -input=false"
