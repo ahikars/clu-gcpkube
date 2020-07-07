@@ -1,5 +1,10 @@
 pipeline {
-  agent any
+    agent {
+    docker {
+      image 'hashicorp/terraform:light'
+      args '--entrypoint='
+    }
+  }
   stages {
     stage('Terraform Init') {
       steps {
@@ -20,3 +25,4 @@ pipeline {
     
   }
 }
+
