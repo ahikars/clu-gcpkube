@@ -37,7 +37,7 @@ data "google_client_config" "default" {
 }
 
 data "google_container_cluster" "my_cluster" {
-  name = "my-cluster"
+  name = "${var.project_id}-gke
   zone = "us-central1-a"
 }
 
