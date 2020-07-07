@@ -9,10 +9,10 @@ pipeline {
       steps {
         sh "pwd"
         sh "ls"
-        sh "terraform init"
+        sh sh "${env.TERRAFORM_HOME}/terraform init -input=false"
         }
     }
-    // sh "${env.TERRAFORM_HOME}/terraform init -input=false"
+
     stage('Terraform Plan') {
       steps {
         sh "${env.TERRAFORM_HOME}/terraform plan -out=tfplan -input=false -var-file='dev.tfvars'"
