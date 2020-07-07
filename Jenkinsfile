@@ -19,8 +19,8 @@ pipeline {
 
     stage('Terraform Apply') {
       steps {
-        input 'yes'
-        sh "${env.TERRAFORM_HOME}/terraform apply"
+ //       input 'yes'
+        sh "${env.TERRAFORM_HOME}/terraform apply -auto-approve"
       }
     }
     
