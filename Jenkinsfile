@@ -1,7 +1,7 @@
 pipeline {
   agent any
   environment {
-    TERRAFORM_HOME = "/var/jenkins_home"
+    TERRAFORM_HOME = "~/jenkins_home"
     TF_IN_AUTOMATION = 'true'
   }
   stages {
